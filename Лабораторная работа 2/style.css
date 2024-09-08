@@ -1,0 +1,72 @@
+body {
+    background-color: #DEF83B; 
+}
+
+.auto 
+{
+    width: 1440px;
+    margin: auto;
+}
+
+.image {
+    display: flex;
+    justify-content: space-around;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+img {
+    border: 2px solid black;
+    border-radius: 30px;
+    width: 400px;
+    height: 300px;
+}
+
+@font-face {
+    font-family: "sponge";
+    src: url("fonts/sponge.ttf");
+}
+
+@font-face {
+    font-family: "harry";
+    src: url("fonts/Harry\ Potter.ttf");
+}
+
+@font-face {
+    font-family: "alone";
+    src: url("fonts/alone.ttf");
+}
+
+#sponge {
+    font-family: "sponge";
+}
+
+
+#home-alone {
+    font-family: "alone";
+}
+
+#harry-potter {
+    font-family: "harry";
+}
+
+#sponge p {
+    text-align: center;
+}
+
+#home-alone p {
+    text-align: justify;
+}
+
+#harry-potter p {
+    text-align: right;
+}
+
