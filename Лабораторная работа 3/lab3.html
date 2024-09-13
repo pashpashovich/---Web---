@@ -16,9 +16,9 @@
         <label for="email">Электронная почта:</label>
         <input type="email" id="email" required />
         <label for="phone">Телефон:</label>
-        <input type="tel" id="phone" required />
+        <small>Формат: +375291111111</small>
+        <input type="tel" id="phone" pattern="[+]{1}[0-9]{12}" required />
       </fieldset>
-
       <fieldset>
         <legend class="center">Аккаунт</legend>
         <label for="login">Логин:</label>
@@ -42,8 +42,8 @@
         <legend class="center">Дополнительная информация</legend>
         <label for="file">Загрузите ваше фото:</label>
         <input type="file" id="file" />
-        <label for="comments">Комментарии:</label>
-        <textarea id="comments" rows="4" cols="50"></textarea>
+        <label for="comments">О себе:</label>
+        <textarea id="comments" rows="2" cols="50"></textarea>
       </fieldset>
       <input type="submit" />
       <input type="reset" />
