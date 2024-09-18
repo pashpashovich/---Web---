@@ -22,8 +22,170 @@ button {
   margin: 50px;
   font-size: 20px;
   background-color: red;
+  animation: shake_button;
+  animation-duration: 100ms;
+  animation-iteration-count: infinite;
+}
+
+button:hover{
+  animation: none;
+  background-color: green;
 }
 
 a {
   font-size: 20px;
+  text-decoration: none;
+  cursor: pointer;
+  color: black;
+  position: relative;
+}
+
+a:after {
+	display: block;
+  position: absolute;
+	left: 50%;
+	width: 0;
+  bottom: 0;
+	height: 2px; 
+	background-color: green; 
+	content: "";
+  transform: translate(-50%);
+	transition: width 0.3s ease-out;
+}
+
+a:hover:after {
+	width: 100%; 
+}
+
+.ball {
+  position: absolute;
+  margin-left: 800px;
+  margin-right: auto;
+  width: 50px;
+  height: 50px;
+  background-color: red;
+  border-radius: 50%;
+  animation: fall 2.5s ease-in-out forwards;
+}
+
+@keyframes shake_button{
+  0% { transform: translateX(0) }
+  50% { transform: translateX(4px) }
+  100% { transform: translateX(0) }
+}
+
+@keyframes fall {
+  0% {
+      transform: translateY(0);
+  }
+  15% {
+    width: 50px;
+    height: 50px;
+  }
+  30%{
+    transform: translateY(400px);
+    width: 70px;
+    height: 30px;
+  }
+  45% {
+    transform: translateY(200px);
+    width: 50px;
+    height: 50px;
+  }
+  60%{
+    transform: translateY(400px);
+    width: 60x;
+    height: 30px;
+  }
+  75% {
+    transform: translateY(300px);
+    width: 50px;
+    height: 50px;
+  }
+  100%{
+    transform: translateY(400px);
+  }
+}
+
+.container {
+  height: 140px;
+  width: 300px;
+  border-top: 22px solid rgb(31, 31, 31);
+  position:absolute;
+  margin-top: 200px;
+  margin-left: 300px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.bead 
+{
+  height: 150px;
+  width: 5px;
+  background-color: rgb(31, 31, 31);
+  position: relative;
+  transform-origin: top;
+}
+
+.bead::after {
+  position: absolute;
+  content: "";
+  height: 60px;
+  width: 60px;
+  background-color: rgb(70, 70, 70);
+  border-radius: 50%;
+  left: -30px;
+  bottom: -60px;
+}
+
+.bead:first-child {
+  animation: swing1 1.2s infinite linear;
+}
+
+.bead:last-child {
+  animation: swing2 1.2s 0.6s infinite linear;
+}
+
+#second {
+  animation: swing3 1.2s infinite linear;
+}
+@keyframes swing1 {
+  25% {
+    transform: rotate(50deg);
+  }
+  50% {
+    transform:rotate(0deg) ;
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes swing2 {
+  25% {
+    transform: rotate(-50deg);
+  }
+  50% {
+    transform:rotate(0deg) ;
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes swing3 {
+  20% {
+    transform: rotate(-3deg);
+  }
+  25% {
+    transform: rotate(-5deg);
+  }
+  45% {
+    transform: rotate(2deg);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
 }
