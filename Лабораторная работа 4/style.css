@@ -148,9 +148,6 @@ a:hover:after {
   animation: swing2 1.2s 0.6s infinite linear;
 }
 
-#second {
-  animation: swing3 1.2s infinite linear;
-}
 @keyframes swing1 {
   25% {
     transform: rotate(50deg);
@@ -172,20 +169,5 @@ a:hover:after {
   }
   100% {
     transform: rotate(0deg);
-  }
-}
-
-@keyframes swing3 {
-  20% {
-    transform: rotate(-3deg);
-  }
-  25% {
-    transform: rotate(-5deg);
-  }
-  45% {
-    transform: rotate(2deg);
-  }
-  50% {
-    transform: rotate(5deg);
   }
 }
