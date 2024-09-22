@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <script>
+        function changeGrid(property, value,id) {
+    const gridContainer = document.getElementById(id);
+    gridContainer.style[property] = value;
+}
+    </script>
+    <header>
+        <h1>Изучаем grid</h1>
+    </header>
+    <div class="container">
+        <h1>grid-template-columns</h1>
+        <div class="button-group">
+            <button onclick="changeGrid('grid-template-columns', 'repeat(1, 1fr)','grid-container')">1 колонка</button>
+            <button onclick="changeGrid('grid-template-columns', 'repeat(2, 1fr)','grid-container')">2 колонки</button>
+            <button onclick="changeGrid('grid-template-columns', 'repeat(3, 1fr)','grid-container')">3 колонки</button>
+        </div>
+        <div id="grid-container" class="grid-container">
+            <div class="grid-item">1</div>
+            <div class="grid-item">2</div>
+            <div class="grid-item">3</div>
+            <div class="grid-item">4</div>
+            <div class="grid-item">5</div>
+            <div class="grid-item">6</div>
+        </div>
+    </div>
+    <div class="container"></div>
+        <h1>gap</h1>
+        <div class="button-group">
+            <button onclick="changeGrid('grid-gap', '60px','grid-container2')">60px</button>
+            <button onclick="changeGrid('grid-gap', '5%','grid-container2')">5%</button>
+            <button onclick="changeGrid('grid-gap', '5px 20px','grid-container2')">5px 20px </button>
+        </div>
+        <div id="grid-container2" class="grid-container2">
+            <div class="grid-item">1</div>
+            <div class="grid-item">2</div>
+            <div class="grid-item">3</div>
+            <div class="grid-item">4</div>
+            <div class="grid-item">5</div>
+            <div class="grid-item">6</div>
+        </div>
+    </div>
+
+    <div class="container"></div>
+    <h1>justify-items</h1>
+    <div class="button-group">
+        <button onclick="changeGrid('justify-items', 'start','grid-container3')">start</button>
+        <button onclick="changeGrid('justify-items', 'end','grid-container3')">end</button>
+        <button onclick="changeGrid('justify-items', 'center','grid-container3')">center</button>    
+        <button onclick="changeGrid('justify-items', 'stretch','grid-container3')">stretch</button>    
+    </div>
+    <div id="grid-container3" class="grid-container3">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">4</div>
+        <div class="grid-item">5</div>
+        <div class="grid-item">6</div>
+    </div>
+</div>
+</body>
+</html>
