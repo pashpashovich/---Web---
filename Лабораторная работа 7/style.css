@@ -78,3 +78,78 @@ html {
       "eighth ninth"
   }
 }
+
+.image-container {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  padding: 20px;
+  flex-wrap: nowrap;
+}
+
+.image-container img {
+  width: 350px;
+  height: 200px;
+  margin-left: 10px; 
+  transition: transform 0.3s ease, z-index 0.3s;
+  position: relative;
+  z-index: 1;
+}
+
+.image-container img:first-child {
+  margin-left: 0; 
+}
+
+.image-container img:hover {
+  transform: scale(1.2);
+  z-index: 10;
+}
+
+@media ((min-width: 1000px) and (max-width:1399px)) {
+  .image-container img {
+    margin-left: -40px; 
+  }
+
+  img:nth-child(2) {
+    margin-top: 5%;
+  }
+  img:nth-child(3) {
+    margin-top: 10%;
+  }
+  img:nth-child(4) {
+    margin-top: 15%;
+  }
+}
+
+
+@media ((min-width: 700px) and (max-width:999px)) {
+  .image-container img {
+    margin-left: -120px; 
+  }
+
+  img:nth-child(2) {
+    margin-top: 10%;
+  }
+  img:nth-child(3) {
+    margin-top: 20%;
+  }
+  img:nth-child(4) {
+    margin-top: 30%;
+  }
+}
+
+@media (max-width: 699px) {
+  .image-container img {
+    margin-left: -200px; 
+  }
+
+  img:nth-child(2) {
+    margin-top: 15%;
+  }
+  img:nth-child(3) {
+    margin-top: 30%;
+  }
+  img:nth-child(4) {
+    margin-top: 45%;
+  }
+}
